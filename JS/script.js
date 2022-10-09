@@ -24,7 +24,7 @@
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, taskIndex) => {
-            removeButton.addEvenListener("click", () => {
+            removeButton.addEventListener("click", () => {
                 removeTask(taskIndex);
             });
         });
