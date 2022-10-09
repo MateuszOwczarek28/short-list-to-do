@@ -6,7 +6,7 @@
     };
 
     const addNewTask = (newTaskContent) => {
-        task.push({content: newTaskContent});
+        tasks.push({content: newTaskContent});
         render();
     };
 
@@ -15,13 +15,13 @@
         render();
     }; 
 
-    const toggleTaskDone = (taskIndex) =>{
+    const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
     };
 
     const bindEvents = () => {
-        cost removeButtons = document.querySelectorAll(".js-remove");
+        const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEvenListener("click", () => {
@@ -62,8 +62,8 @@
         bindEvents();
     };
     
-    const onForSubmint = (event) =>{
-        event.preventDevault();
+    const onFormSubmint = (event) =>{
+        event.preventDefault();
 
         const newTaskElement = document.querySelector(".js-newTask");
         const newTaskContent = newTaskElement.value.trim();
@@ -81,7 +81,7 @@
         welcome();
 
         const from = document.querySelector(".js-form");
-        from.addEventListener("submit", onForSubmint);
+        from.addEventListener("submit", onFormSubmint);
     };
 
     init();

@@ -17,13 +17,13 @@
 
 .form__button {
     color: white;
-    background: hsl(180, 88%, 52%);
+    background: teal;
     padding: 10px;
     border: none;
 }
 .form__button:hover {
     color: white;
-    background: hsl(180, 78%, 63%);
+    background: rgb(7, 194, 194));
     padding: 10px;
     border: none;
 }
